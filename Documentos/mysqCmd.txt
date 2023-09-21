@@ -1,0 +1,7 @@
+CREATE TABLE funcionarios (cpf int(11) NOT NULL, nome varchar(255) NOT NULL, profissao varchar(11) NOT NULL);
+
+INSERT INTO funcionarios (cpf, nome, profissao) VALUES ("00000000000", 'Nome', 'Prossisão');
+
+DELETE from funcionarios WHERE nome = 'nome'
+
+UPDATE funcionarios SET nome = 'novo nome' WHERE cpf = 000000;

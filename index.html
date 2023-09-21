@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Web</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+
+    <div class="box">        
+
+        <p>Cadastrar:</p>
+
+        <label for="cpf">CPF:<input type="text" name="cpf" id="cpf"></label>
+
+        <label for="nome">Nome:<input type="text" name="nome" id="nome"></label>
+
+        <label for="profissao">Prossissão:<input type="text" name="profissao" id="profissao"></label>
+
+        <button onclick="Enviar()" id="btCadastrar">cadastrar</button>
+
+        <button onclick="Receber()" id="getDataBtn">Obter Dados do Backend</button>
+
+        <div id="dataDisplay">...</div>
+
+    </div>
+
+</body>
+</html>
+<script src="script.js"></script>
