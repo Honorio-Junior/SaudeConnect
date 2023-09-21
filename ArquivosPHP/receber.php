@@ -8,7 +8,7 @@
             die("Conexão falhou: " . $conn->connect_error);
         }else{
 
-            $sql = "SELECT cpf, nome, profissao FROM funcionarios";
+            $sql = "SELECT cpf, nome, profissao, nascimento, email FROM funcionario";
             $result = $conn->query($sql);
             $data = array();
             

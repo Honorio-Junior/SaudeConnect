@@ -1,3 +1,5 @@
 <?php
-    echo "Função de apagar...";
+    include('conexao.php');
+
+    
 ?>

@@ -1,6 +1,8 @@
 const cpf = document.querySelector('#cpf');
 const nome = document.querySelector('#nome');
 const profissao = document.querySelector('#profissao');
+const nascimento = document.querySelector('#nascimento');
+const email = document.querySelector('#email');
 const dataDisplay = document.getElementById('dataDisplay');
 
 const Receber = async () => {
@@ -16,9 +18,12 @@ const Receber = async () => {
         data.forEach(item => {
             const newItem = document.createElement('div');
             newItem.innerHTML = `
+                <hr>
                 <p>CPF: ${item.cpf}</p>
                 <p>Nome: ${item.nome}</p>
                 <p>Profissão: ${item.profissao}</p>
+                <p>Nascimento: ${item.nascimento}</p>
+                <p>Email: ${item.email}</p>
                 <input type="checkbox" class="checkbox" data-cpf="${item.cpf}">
                 <hr>`;
             dataDisplay.appendChild(newItem);
@@ -33,7 +38,13 @@ const Enviar = async () => {
 
     try {
         //Cria um objeto contendo os valores inseridos
-        const novoFuncionario = {cpf: cpf.value, nome: nome.value, profissao: profissao.value}
+        const novoFuncionario = {
+            cpf: cpf.value, 
+            nome: nome.value, 
+            profissao: profissao.value,
+            nascimento: nascimento.value,
+            email: email.value
+        }
 
         //Faz a solicitação ao php para enviar os dados informados pela const acima
         const response = await fetch('ArquivosPHP/cadastrar.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(novoFuncionario)});
@@ -48,6 +59,8 @@ const Enviar = async () => {
         cpf.value = '';
         nome.value = '';
         profissao.value = '';
+        nascimento.value = '';
+        email.value = '';
 
     } catch (error) {
         console.error('Erro ao enviar os dados:', error);

@@ -13,8 +13,10 @@
             $cpf = $data['cpf'];
             $nome = $data['nome'];
             $profissao = $data['profissao'];
+            $nascimento = $data['nascimento'];
+            $email = $data['email'];
             
-            $sql = "INSERT INTO funcionarios (cpf, nome, profissao) VALUES ('$cpf', '$nome', '$profissao')";
+            $sql = "INSERT INTO Funcionario (cpf, nome, profissao, nascimento, email) VALUES ('$cpf', '$nome', '$profissao', '$nascimento', '$email')";
             $result = $conn->query($sql);
 
             if ($result) {
