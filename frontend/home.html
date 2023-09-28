@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saúde Connect</title>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="hero-container">
+      <div>
+        <h1 class="logo">Saúde Connect</h1>
+        <span>Como esta se sentindo?</span>
+        <h1>Faça seu agendamento</h1>
+        <p>Encontre os melhores pediatras disponíveis para consultas</p>
+      </div>
+    </div>
+
+    <div id="form" class="form-container">
+      <div class="card-form">
+        <h1>Agende Seu Pediatra</h1>
+        <p>Escolha um pediatra na lista e você receberá a confirmação</p>
+
+        <form action="">
+          <div class="input-wrapper">
+            <label for="name">Nome do Paciente*</label>
+            <input type="text" id="nome_paciente">
+          </div>
+
+          <div class="input-wrapper">
+            <label for="medic">Nome do Médico*</label>
+            <select name="medic" id="nome_medico">
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="date">Data do agendamento</label>
+            <input type="date" id="data_agendamento">
+          </div>
+
+          <button class="primary-button" id="btCadastrar">Agendar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./script.js"></script>
+</html>

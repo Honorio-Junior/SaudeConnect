@@ -1,0 +1,148 @@
+/* botoes repetidos */
+.primary-button {
+  padding: 0.5625rem 1rem;
+  border-radius: 3px;
+  border: 1px solid var(--primary-blue);
+  background: var(--primary-blue);
+  box-shadow: 0px 3px 5px 1px rgba(15, 148, 204, 0.15);
+
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.75px;
+}
+
+/* barra de navegação */
+.nav {
+  padding: 30px 150px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--white);
+}
+
+.nav h1 {
+  color: var(--title);
+  font-family: 'Poppins';
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -1.14px;
+}
+main {
+  margin-top: 60px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  padding: 30px;
+  margin: 0 auto;
+
+  max-width: 1082px;
+
+  background-color: var(--white);
+}
+
+.card-head {
+  padding: 0 15px;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-head h1 {
+  color: var(--title);
+  font-family: 'Poppins';
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+
+tbody {
+  max-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+tr {
+  border: 0;
+  display: grid;
+  grid-template-columns: 300px 130px 300px 60px;
+
+  gap: 50px;
+
+  justify-content: space-between;
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.table-head {
+  padding: 25px 30px;
+  margin: 0 -15px;
+  background: var(--background-color);
+  border-radius: 3px;
+}
+
+th {
+  color: var(--second-text);
+
+  font-family: 'Poppins';
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.26px;
+  text-transform: uppercase;
+}
+
+td {
+  color: var(--Text, #959ea7);
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+td i {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+th,
+td {
+  text-align: left;
+}
+
+input {
+  width: 251px;
+  height: 45px;
+  padding: 11px 21px 11px 21px;
+  align-items: center;
+  flex-shrink: 0;
+
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  background: #f9f9f9;
+
+  color: var(--text);
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 200% */
+  letter-spacing: 0.2px;
+}

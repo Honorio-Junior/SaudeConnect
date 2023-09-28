@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="nav">
+      <h1>Saúde Connect</h1>
+    </nav>
+
+    <main>
+      <div class="card">
+        <div class="card-head">
+          <h1>Lista de Agendamentos</h1>
+
+          <form>
+            <input type="search" placeholder="Nome ou Cpf" id="nome_medico">
+            <button class="primary-button" id="btBuscar">buscar</button>
+          </form>
+        </div>
+
+        <table>
+
+          <tr class="table-head">
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Agendamento</th>
+            <th>Ações</th>
+          </tr>
+
+          <tr>
+            <td>Tiago Hasuda</td>
+            <td>190.578.065-37</td>
+            <td>Set 09 - Alon Freitas</td>
+            <td>
+              <i class="ph ph-trash" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Renata Silva</td>
+            <td>144.578.065-78</td>
+            <td>Set 09 - Fernanda Silva</td>
+            <td>
+              <i class="ph ph-trash" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Fernando Marques</td>
+            <td>187.578.065-83</td>
+            <td>Set 09 - Carlos Magualhães</td>
+            <td>
+              <i class="ph ph-trash" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Luís Arthur Cavalcante</td>
+            <td>127.578.065-67</td>
+            <td>Set 09 - Cristina Sousa</td>
+            <td>
+              <i class="ph ph-trash" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>
