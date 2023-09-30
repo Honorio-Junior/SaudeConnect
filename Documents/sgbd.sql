@@ -18,7 +18,7 @@ CREATE TABLE agendamentos (
 CREATE TABLE pacientes (
     nome_paciente VARCHAR(200) NOT NULL,
     nome_responsavel VARCHAR(200) NOT NULL,
-    idade INT(2) NOT NULL,
+    idade INT(1) NOT NULL,
     sexo VARCHAR(20) NOT NULL,
     telefone VARCHAR(11) NOT NULL,
     email VARCHAR(200) NOT NULL,

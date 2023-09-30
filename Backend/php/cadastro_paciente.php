@@ -10,17 +10,20 @@
         $data = json_decode(file_get_contents('php://input'), true);
 
         $nome_paciente = $data['nome_paciente'];
-        $nome_medico = $data['nome_medico'];
-        $data_agendamento = $data['data_agendamento'];
         $nome_responsavel = $data['nome_responsavel'];
+        $idade = $data['idade'];
+        $sexo = $data['sexo'];
+        $telefone = $data['telefone'];
+        $email = $data['email'];
+        $senha = $data['senha'];
         
-        $sql = "INSERT INTO agendamentos (nome_paciente, nome_medico, data_agendamento, nome_responsavel) 
-                VALUES ('$nome_paciente', '$nome_medico', '$data_agendamento', '$nome_responsavel')";
-    
+        $sql = "INSERT INTO pacientes (nome_paciente, telefone, senha, nome_responsavel, email, idade, sexo) 
+                VALUES ('$nome_paciente', '$telefone', '$senha', '$nome_responsavel', '$email', '$idade', '$sexo')";
+
         $result = $conn->query($sql);
 
         if ($result) {
-            $response = array('message' => 'Dados do funcionário inseridos com sucesso.');
+            $response = array('message' => 'Dados do paciente inseridos com sucesso.');
         } else {
             $response = array('message' => 'Erro ao inserir dados: ' . $conn->error);
         }
@@ -31,5 +34,4 @@
         echo json_encode($response);
 
     }
-
 ?>
