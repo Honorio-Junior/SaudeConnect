@@ -12,8 +12,11 @@
         $nome_paciente = $data['nome_paciente'];
         $nome_medico = $data['nome_medico'];
         $data_agendamento = $data['data_agendamento'];
+        $nome_responsavel = $data['nome_responsavel'];
         
-        $sql = "INSERT INTO agendamentos (nome_paciente, nome_medico, data_agendamento) VALUES ('$nome_paciente', '$nome_medico', '$data_agendamento')";
+        $sql = "INSERT INTO agendamentos (nome_paciente, nome_medico, data_agendamento, nome_responsavel) 
+                VALUES ('$nome_paciente', '$nome_medico', '$data_agendamento', '$nome_responsavel')";
+    
         $result = $conn->query($sql);
 
         if ($result) {
