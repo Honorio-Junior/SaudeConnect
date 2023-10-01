@@ -27,7 +27,7 @@ async function cadastrar_paciente() {
             {method: 'POST', 
             headers: {'Content-Type': 'application/json'}, 
             body: JSON.stringify(novo_paciente)}
-        );
+    );
     
     const data = await response.json();
     

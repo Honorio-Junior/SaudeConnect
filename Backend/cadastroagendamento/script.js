@@ -3,6 +3,7 @@ const nomeResponsavel = document.getElementById('nome_responsavel');
 const nomeMedico = document.getElementById('nome_medico');
 const dataAgendamento = document.getElementById('data_agendamento');
 const getData = document.getElementById('getData');
+const deslogar = document.getElementById('deslogar');
 
 const btCadastrar = document.getElementById('btCadastrar');
 
@@ -22,11 +23,11 @@ btCadastrar.addEventListener('click', async ()=>{
             nome_medico: nomeMedico.value
         }
 
-        const response = await fetch('./php/pesquisar_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(pesquisarAgendamento)});
+        const response = await fetch('../php/pesquisar_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(pesquisarAgendamento)});
         const data = await response.json();
         console.log('Agendamentos:', data);
 
-        const cadastrar = await fetch('./php/cadastro_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(novoAgendamento)});
+        const cadastrar = await fetch('../php/cadastro_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(novoAgendamento)});
 
         //Limpa os campos de input
         nomePaciente.value = '';
@@ -46,7 +47,7 @@ getData.addEventListener('click', async ()=>{
         nome_medico: nomeMedico.value
     }
 
-    const response = await fetch('./php/pesquisar_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(pesquisarAgendamento)});
+    const response = await fetch('../php/pesquisar_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(pesquisarAgendamento)});
     
     const data = await response.json();
 
@@ -55,10 +56,29 @@ getData.addEventListener('click', async ()=>{
 });
 
 
+deslogar.addEventListener('click', async () =>{
+
+    const response = await fetch('./index.php',
+        {method: 'POST', 
+        headers: {'Content-Type': 'application/json'}, 
+        body: JSON.stringify({ funcao: 'deslogar' })}
+    );
+
+    if (response['redirected'] == true){
+        const location = response['url'];
+        console.log(response);
+        if (location) {
+            window.location.href = location;
+        }
+    }
+});
+
+
+
 async function buscarMedicos(){
     try {
 
-        const response = await fetch('./php/medicos.php');
+        const response = await fetch('../php/medicos.php');
         const data = await response.json();
         
         console.log('medicos:', data)
