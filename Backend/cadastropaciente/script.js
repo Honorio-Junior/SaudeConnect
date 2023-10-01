@@ -23,6 +23,14 @@ async function cadastrar_paciente() {
         senha: senha.value,
     }
 
+    nome_paciente.value = '';
+    nome_responsavel.value = '';
+    idade.value = '';
+    sexo.value = '';
+    telefone.value = '';
+    email.value = '';
+    senha.value = '';
+
     const response = await fetch('../php/cadastro_paciente.php', 
             {method: 'POST', 
             headers: {'Content-Type': 'application/json'}, 
@@ -32,5 +40,7 @@ async function cadastrar_paciente() {
     const data = await response.json();
     
     console.log(data['message'])
+
+    window.location.href = '../login/';
 
 }

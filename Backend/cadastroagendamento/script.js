@@ -30,8 +30,6 @@ btCadastrar.addEventListener('click', async ()=>{
         const cadastrar = await fetch('../php/cadastro_agendamento.php', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(novoAgendamento)});
 
         //Limpa os campos de input
-        nomePaciente.value = '';
-        nomeMedico.value = '';
         dataAgendamento.value = '';
 
     } catch (error) {
