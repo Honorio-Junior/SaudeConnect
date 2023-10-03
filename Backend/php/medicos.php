@@ -18,8 +18,18 @@
             }
         }
 
+        $medicos = array();
+
+        foreach ($data as $objeto) {    
+            $medico = array(
+                'id' => $objeto['id'],
+                'nome' => $objeto['nome']
+            );
+            $medicos[] = $medico;
+        }
+
         header('Content-Type: application/json');
-        echo json_encode($data);
+        echo json_encode($medicos);
 
         $conn->close();
 
