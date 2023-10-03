@@ -1,12 +1,12 @@
 <?php
 
-    include("../conexao.php");
+    include("conexao.php");
 
     if ($conn->connect_error) {
         die("Conexão falhou: " . $conn->connect_error);
     }else{
 
-        $sql = "SELECT * FROM medico";
+        $sql = "SELECT * FROM agendamentos";
         $result = $conn->query($sql);
         $data = array();
         
