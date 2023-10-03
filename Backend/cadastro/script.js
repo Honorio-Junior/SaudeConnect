@@ -46,3 +46,9 @@ async function cadastrar_paciente() {
     }, 5000);
 
 }
+
+const botao_login = document.querySelector('#botao_login');
+    
+function login(){
+    window.location.href = '../login/';
+}

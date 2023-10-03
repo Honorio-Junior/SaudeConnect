@@ -1,8 +1,0 @@
-INSERT INTO medico (id, nome, nascimento, email) VALUES (111, 'Dr. Albert', '2000-25-05', 'dralbert@email');
-
-SELECT * FROM medico WHERE id = 111;
-
-UPDATE medico SET nascimento = "2000-05-25" WHERE id = 111;
-
-DELETE FROM clientes WHERE id = 1;
-

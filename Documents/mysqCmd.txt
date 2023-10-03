@@ -1,7 +1,7 @@
-CREATE TABLE funcionarios (cpf int(11) NOT NULL, nome varchar(255) NOT NULL, profissao varchar(11) NOT NULL);
+INSERT INTO medico (id, nome, nascimento, email) VALUES (111, 'Dr. Albert', '2000-25-05', 'dralbert@email');
 
-INSERT INTO funcionarios (cpf, nome, profissao) VALUES ("00000000000", 'Nome', 'Prossisão');
+SELECT * FROM medico WHERE id = 111;
 
-DELETE from funcionarios WHERE nome = 'nome'
+UPDATE medico SET nascimento = "2000-05-25" WHERE id = 111;
 
-UPDATE funcionarios SET nome = 'novo nome' WHERE cpf = 000000;
+DELETE FROM clientes WHERE id = 1;

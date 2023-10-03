@@ -1,5 +1,5 @@
 <?php
-    session_set_cookie_params(['lifetime' => 1800]);
+    session_set_cookie_params(['lifetime' => 900]);
     session_start();
     include('../conexao.php');
 
@@ -62,5 +62,13 @@
         <br>
         <input type="submit" value="Entrar">
     </form>
+    <button onclick='cadastrar()' id='botao_cadastrar'>Cadastrar</button>
 </body>
+<script>
+    const botao_cadastrar = document.querySelector('#botao_cadastrar');
+    
+    function cadastrar(){
+        window.location.href = '../cadastro/';
+    }
+</script>
 </html>
