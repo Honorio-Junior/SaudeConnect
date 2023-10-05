@@ -43,7 +43,7 @@ async function cadastrar_paciente() {
 
     setTimeout(function() {
         window.location.href = '../login/';
-    }, 5000);
+    }, 1500);
 
 }
 
