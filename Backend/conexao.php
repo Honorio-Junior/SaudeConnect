@@ -7,7 +7,7 @@
     }
 
     $host ='localhost';
-    $user = '';
+    $user = 'root';
     $senha = '';
     $banco = 'saudeconnect';
 
