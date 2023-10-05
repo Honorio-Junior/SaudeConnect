@@ -7,8 +7,8 @@
     }
 
     $host ='localhost';
-    $user = 'hono';
-    $senha = '123';
+    $user = '';
+    $senha = '';
     $banco = 'saudeconnect';
 
     $conn = new mysqli($host, $user,$senha, $banco);
