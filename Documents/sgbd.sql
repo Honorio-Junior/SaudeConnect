@@ -9,6 +9,18 @@ CREATE TABLE medico (
     senha VARCHAR(255) NOT NULL
 );
 
+-- Tabela 'paciente':
+CREATE TABLE paciente (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    responsavel VARCHAR(200) NOT NULL,
+    sexo VARCHAR(20) NOT NULL,
+    idade INT NOT NULL,
+    telefone VARCHAR(11),
+    email VARCHAR(200) NOT NULL UNIQUE,
+    senha VARCHAR(200) NOT NULL
+);
+
 -- Tabela 'agendamento':
 CREATE TABLE agendamento (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -20,18 +32,6 @@ CREATE TABLE agendamento (
     FOREIGN KEY (id_paciente) REFERENCES paciente(id),
     FOREIGN KEY (id_medico) REFERENCES medico(id),
     CONSTRAINT unique_agendamento UNIQUE (data_agendamento, id_paciente)
-);
-
--- Tabela 'paciente':
-CREATE TABLE paciente (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(200) NOT NULL,
-    responsavel VARCHAR(200) NOT NULL,
-    sexo VARCHAR(20) NOT NULL,
-    idade INT NOT NULL,
-    telefone VARCHAR(11),
-    email VARCHAR(200) NOT NULL UNIQUE,
-    senha VARCHAR(200) NOT NULL
 );
 
 DELIMITER //
