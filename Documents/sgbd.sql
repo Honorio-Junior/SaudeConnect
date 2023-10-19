@@ -2,7 +2,7 @@
 
 -- Tabela 'medico':
 CREATE TABLE medico (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(200) NOT NULL,
     nascimento DATE NOT NULL,
     email VARCHAR(200) NOT NULL UNIQUE,
@@ -33,3 +33,31 @@ CREATE TABLE paciente (
     email VARCHAR(200) NOT NULL UNIQUE,
     senha VARCHAR(200) NOT NULL
 );
+
+DELIMITER //
+CREATE TRIGGER NomePacienteAgendamento
+BEFORE INSERT ON agendamento
+FOR EACH ROW
+BEGIN
+
+  DECLARE paciente_nome_temp VARCHAR(200);
+  SELECT nome INTO paciente_nome_temp FROM paciente WHERE id = NEW.id_paciente;
+  SET NEW.nome_paciente = paciente_nome_temp;
+
+END;
+//
+DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER NomeMedicoAgendamento
+BEFORE INSERT ON agendamento
+FOR EACH ROW
+BEGIN
+
+  DECLARE medico_nome_temp VARCHAR(200);
+  SELECT nome INTO medico_nome_temp FROM medico WHERE id = NEW.id_medico;
+  SET NEW.nome_medico = medico_nome_temp;
+
+END;
+//
+DELIMITER ;
